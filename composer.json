@@ -1,0 +1,12 @@
+{
+    "name": "xnok/skeleton",
+    "authors": [
+        {
+            "name": "Alexandre Couedelo",
+            "email": "alexandre.couedelo@mines-ales.org"
+        }
+    ],
+    "require": {
+        "twbs/bootstrap-sass": "3.3.4"
+    }
+}
