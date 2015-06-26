@@ -1,0 +1,27 @@
+/*----------------------------------------------------------------*\
+		1_$VARIABLES
+\*----------------------------------------------------------------*/
+$l-footer-bg : #fff;
+$l-footer-ft : #aaa;
+$l-footer-border : #bbb;
+
+/*----------------------------------------------------------------*\
+		2_$DEFINITIONS
+\*----------------------------------------------------------------*/
+.l-footer{
+  clear: both;
+  padding: 5px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+
+  border-top: 1px solid $l-footer-border;
+
+  background: $l-footer-bg;
+
+  font-size: 0.9em;
+  color: $l-footer-ft;
+
+  text-align: center;
+  
+}

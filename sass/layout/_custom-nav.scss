@@ -1,0 +1,32 @@
+/*----------------------------------------------------------------*\
+		1_$VARIABLES
+\*----------------------------------------------------------------*/
+$nav--sub-font-color: #FFF;
+$nav--sub-font-color-hover: #555555;
+
+/*----------------------------------------------------------------*\
+		2_$DEFINITIONS
+\*----------------------------------------------------------------*/
+.navbar--custom{
+	margin-top: 10px;
+
+	li{
+		border-radius: 4px 4px 0 0;
+
+		a{
+			border-radius: inherit;
+		}
+	}
+}
+
+.nav--sub{
+	 color: $nav--sub-font-color;
+
+	 a{
+	 	color:inherit;
+
+	 	&:hover{
+	 		color: $nav--sub-font-color-hover;
+	 	}
+	 }
+}

@@ -1,0 +1,197 @@
+/*----------------------------------------------------------------*\
+		1_$VARIABLES
+\*----------------------------------------------------------------*/
+$data-list-bg : #FFEBC1;
+
+$data-list-border : #FDBF3B;
+
+$card-bg: #FFF;
+$card-color: #EF5A31;
+$card-duration: 0.3s;
+
+$card-title-ft : #A6750C;
+$card-description-ft: #666C74;
+
+/*----------------------------------------------------------------*\
+		2_$DEFINITIONS
+\*----------------------------------------------------------------*/
+.data-list{
+	padding: 4px 4px 4px 30px;
+  	margin-bottom: 12px;
+
+	border: 2px solid $data-list-border;
+	
+	background-color: $data-list-bg;
+
+	a{
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.card{
+	margin: 10px 5px;
+	width: 90%;
+
+	box-shadow: 0px 0px 20px rgba(0,0,0, 0.1);
+	transition: box-shadow $card-duration;
+
+	background-color: $card-bg;
+
+	&:hover{
+		box-shadow: 0px 0px 20px rgba(0,0,0, 0.3);
+	}
+
+	&:hover .card__description{
+		display: block;
+	}
+
+	&__header{
+		width: 100%;
+		position: relative;
+		padding: 0;
+
+		border-bottom: 1px solid $card-color;
+
+		background-color: card-bg;
+	}
+
+	&__date{
+		position: absolute;
+		top:-10px;
+		right:-15px;
+		width:45px;
+		height:45px;
+		padding-top: 8px;
+
+		border-radius: 50px;
+
+		background-color: $card-color;
+
+		color: $card-bg;
+		text-align: center;
+		font-weight: bold;
+		line-height: 15px;
+
+		&__day{
+			display: block;
+			font-size: 15px;
+		}
+
+		&__month{
+			display: block;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+
+	&__body{
+		position: relative;
+		padding: 20px 20px 5px 20px;
+
+		.progress{
+			margin: 0 ;
+		}
+	}
+
+	&__categorie{
+		height: 25px;
+		padding: 5px 15px;
+		margin: 0;
+
+		border-right: 2px solid #FFF;
+
+		background-color: $card-color;
+
+		color: #FFF;
+		font-size: 15px;
+	}
+
+	&__title{
+		margin: 0;
+		padding: 0;
+
+		font-size: 22px;
+		color: $card-title-ft;
+		font-weight: bold;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	&__subtitle{
+		color: $card-color;
+		font-size: 15px;
+		padding: 0 0 10px 0;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	&__description{
+		color: $card-description-ft;
+		font-size: 13;
+		line-height: 27px;
+
+		display: none;
+	}
+
+	&__footer{
+		padding: 10px 5px 5px 10px;
+
+		border-top: 1px solid;
+
+		font-size: 11px;
+		color: #A3A9AB;
+
+		.glyphicon{
+			margin: 0 10px;
+		}
+	}
+}
+
+.card--projet{
+	.card{
+
+		&__body{
+			padding: 5px 10px 2px 10px;
+		}
+
+		&__title{
+			display: inline-block;
+			padding: 0 10px 0 20px;
+		}
+
+		&__subtitle{
+			display: inline-block;
+		}
+
+		&__state{
+			position: absolute;
+			top:-10px;
+			right:-15px;
+			width:45px;
+			height:45px;
+			padding-top: 14px;
+
+			border-radius: 50px;
+
+			color: $card-bg;
+			text-align: center;
+			font-weight: bold;
+			line-height: 15px;
+			
+			&--success{
+				background-color: $brand-success;
+			}
+
+			&--danger{
+				background-color: $brand-danger;
+			}
+
+		}
+	}
+}
+

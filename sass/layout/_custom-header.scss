@@ -1,0 +1,27 @@
+/*----------------------------------------------------------------*\
+		1_$VARIABLES
+\*----------------------------------------------------------------*/
+$l-header-bg : #628DB6;;
+$l-header-ft : #f8f8f8;
+
+/*----------------------------------------------------------------*\
+		2_$DEFINITIONS
+\*----------------------------------------------------------------*/
+.l-header{
+	min-height: 6.3em;
+	margin: 0;
+	padding: 4px 8px 10px 6px;
+	position: relative;
+
+	background-color: $l-header-bg;
+
+	text-align: center;
+	color:$l-header-ft;
+
+	img{
+		border-radius: 10px;
+  		padding: 10px;
+
+		background-color: rgba(#fff, 0.5);
+	}
+}

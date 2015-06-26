@@ -1,0 +1,89 @@
+/*----------------------------------------------------------------*\
+		1_$VARIABLES
+\*----------------------------------------------------------------*/
+$fleche-width: 80px;
+$fleche-height: 80px;
+$fleche-color: #F88282;
+$fleche-font-color: #FFF;
+/*----------------------------------------------------------------*\
+		2_$MIXINS
+\*----------------------------------------------------------------*/
+@mixin fleches($suffix: '',	$fleche-width: 80px, $fleche-height: 80px, $fleche-color: #F88282, $fleche-font-color: #FFF){
+	.fleche#{$suffix}{
+
+		height: $fleche-height;
+
+		float: left;
+
+		a{
+			width: $fleche-width;
+		    height: $fleche-height;
+		    float:left;
+		    padding: 0 10px;
+		        
+		    background-color: $fleche-color;
+		    
+		    text-align: center;
+			font-size: $fleche-height/2;
+		    line-height: $fleche-height;    
+		    color: #fff;
+		}
+
+		&:hover a{
+		    background-color: lighten($fleche-color,10%);
+		}
+
+		&:hover:after{
+	        border-color: transparent transparent transparent lighten($fleche-color,10%);
+	    } 
+
+		&:hover:before{
+	        border-color: lighten($fleche-color,10%) transparent lighten($fleche-color,10%) transparent;
+	    } 
+
+	    
+	    &:after{
+	        content:"";
+	        width: 0; 
+		    height: 0;
+	        display: block; 
+	        float: left;
+	            
+	        border-top: $fleche-height/2 solid transparent;
+	        border-bottom: $fleche-height/2 solid transparent;	
+	        border-left: $fleche-height/2 solid $fleche-color;  
+	    }
+	        
+	    &:before{
+	        content:"";
+	        width: 0; 
+		    height: 0;
+	        display: block; 
+	        float: left;
+	            
+	        border-top: $fleche-height/2 solid $fleche-color;
+	        border-bottom: $fleche-height/2 solid $fleche-color;	
+	        border-left: $fleche-height/2 solid transparent;    
+	    }
+	}
+}
+
+/*----------------------------------------------------------------*\
+		3_$DEFINITIONS
+\*----------------------------------------------------------------*/
+
+.fleche--down{
+	transform: rotate(90deg);
+	margin-top: $fleche-height/2 + 2;
+
+	a{
+		transform: rotate(270deg);
+	}
+}
+
+@include fleches("");
+@include fleches("--success", 80px, 80px, $brand-success, #FFF);
+@include fleches("--danger", 80px, 80px, $brand-danger, #FFF);
+@include fleches("--warning", 80px, 80px, $brand-warning, #FFF);
+@include fleches("--info", 80px, 80px, $brand-info, #FFF);
+@include fleches("--new", 80px, 80px, $gray-light, #FFF);

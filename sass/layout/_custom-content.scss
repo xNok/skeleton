@@ -1,0 +1,61 @@
+/*----------------------------------------------------------------*\
+		1_$VARIABLES
+\*----------------------------------------------------------------*/
+$page-width:	100%;
+$content-width:	 95%;
+$sidebar-width:	 25%; 
+
+$sidebar-color: #EEEEEE;
+
+/*----------------------------------------------------------------*\
+		2_$DEFINITIONS
+\*----------------------------------------------------------------*/
+.l-wrapper{
+	&__sidebar{
+		padding: 20px;
+
+		background-color: $sidebar-color;
+	}
+
+	&__page-content{ min-height: 200px; }
+
+	@media only screen and (min-width: $screen-md-min) { 
+		&__sidebar{
+			position: fixed;
+			right: 0;
+			height: 100%;
+			overflow-y: auto;
+			width: $sidebar-width;
+
+			padding: 0 5px 20px 5px;
+
+			border-left: 1px solid #ddd;
+		}
+
+		&__page-content{
+			width: 100% - $sidebar-width;
+			padding: 20px;
+			position: relative;
+		}
+	}	
+}
+
+.l-main{margin-bottom:50px; }
+
+.l-content{padding: 10px; }
+
+.l-dasboard{
+	@media only screen and (min-width: $screen-sm-min){
+		
+		fieldset{
+			float: left;
+			width: 50%
+		}
+
+		legend{
+			border-left: 2px solid #e5e5e5;
+			padding: 0 10px;
+		}
+	}
+}
+

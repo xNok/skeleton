@@ -1,0 +1,101 @@
+/*----------------------------------------------------------------*\
+		1_$TOOLS
+\*----------------------------------------------------------------*/
+@import "compass";
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+@import "bootstrap-compass";
+
+/*----------------------------------------------------------------*\
+		2_$BASE
+\*----------------------------------------------------------------*/
+/***** Reset and dependencies bootstrap*****/
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+
+/***** Icon *****/
+//$icon-font-path: "bootstrap/";
+//@import "bootstrap/glyphicons";
+//@import "sass/base/custom-icon";
+$fa-font-path: "../fonts/font-awesome-4.3.0";
+@import "sass/base/font-awesome";
+
+/***** Core CSS bootstrap*****/
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+
+/*----------------------------------------------------------------*\
+		3_$LAYOUT
+\*----------------------------------------------------------------*/
+
+	$navbar-default-link-color: #FFF;
+	$navbar-default-bg: #3E5B76;
+	$navbar-default-link-hover-bg: #e7e7e7;
+
+	$navbar-margin-bottom: 0;
+@import "bootstrap/navbar"; /*\ import forms \*/
+@import "bootstrap/navs";
+
+/***** Personalisation *****/
+@import "sass/layout/custom-content";
+@import "sass/layout/custom-footer";
+@import "sass/layout/custom-header";
+@import "sass/layout/custom-nav";
+@import "sass/layout/custom-sidebar";
+/*----------------------------------------------------------------*\
+		4_$MODULES
+\*----------------------------------------------------------------*/
+/***** Personal modules *****/
+@import "sass/modules/card";
+@import "sass/modules/icon-bouton";
+@import "sass/modules/articles";
+@import "sass/modules/flash-msg";
+@import "sass/modules/fleches";
+
+/***** Components bootstrap*****/
+@import "bootstrap/component-animations";
+@import "bootstrap/dropdowns";
+@import "bootstrap/button-groups";
+@import "bootstrap/input-groups";
+
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/pagination";
+@import "bootstrap/pager";
+@import "bootstrap/labels";
+@import "bootstrap/badges";
+@import "bootstrap/jumbotron";
+@import "bootstrap/thumbnails";
+@import "bootstrap/alerts";
+@import "bootstrap/progress-bars";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/panels";
+@import "bootstrap/responsive-embed";
+@import "bootstrap/wells";
+@import "bootstrap/close";
+
+/***** Components w/ JavaScript *****/
+@import "bootstrap/modals";
+@import "bootstrap/tooltip";
+@import "bootstrap/popovers";
+@import "bootstrap/carousel";
+
+// Utility classes
+@import "bootstrap/utilities";
+@import "bootstrap/responsive-utilities";
+
+/*----------------------------------------------------------------*\
+		5_$THEMES
+\*----------------------------------------------------------------*/
+@import "sass/themes/projet";
+
+
+
+

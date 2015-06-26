@@ -1,0 +1,71 @@
+/*----------------------------------------------------------------*\
+		1_$VARIABLES
+\*----------------------------------------------------------------*/
+$icon-bouton-bg : #393939;
+$icon-bouton-ft : #663399;
+
+$icon-bouton-ft--green: #8FBC8F;
+$icon-bouton-ft--red: #CD5C5C;
+
+$icon-bouton-width: 120px;
+$icon-bouton-height: 120px;
+
+
+/*----------------------------------------------------------------*\
+		2_$DEFINITIONS
+\*----------------------------------------------------------------*/
+.icon_bouton{
+	width: $icon-bouton-width;
+	height: $icon-bouton-height;
+	position: relative;
+	float: left;
+	margin: 8px;
+	padding: 5px;
+
+	overflow: hidden;
+
+	border: solid 1px $icon-bouton-bg;
+	border-radius: 8px;
+
+	@include background-image(linear-gradient(#fafafa, lighten($icon-bouton-bg, 70%)));
+
+	text-align: center;
+	color: $icon-bouton-ft;
+	font-size: 15px;
+	line-height: 23px;
+
+	.link{
+		display: block;
+		position: relative;
+		width:100%;
+		height:100%;
+
+		text-align: center;
+		color: inherit;
+
+		i{
+			display: inline-block;
+			
+			font-size: 60px;
+			color: inherit;
+		}
+
+		&:hover{
+			text-decoration: none;
+		}
+	}
+
+	&:hover{
+		@include background-image(linear-gradient(lighten($icon-bouton-bg, 70%), #fafafa));
+	}
+
+	&--green{
+		color: $icon-bouton-ft--green;
+		border-color: $icon-bouton-ft--green;
+	}
+
+	&--red{
+		color: $icon-bouton-ft--red;
+		border-color: $icon-bouton-ft--red;	
+	}
+}
